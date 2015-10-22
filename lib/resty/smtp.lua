@@ -30,6 +30,7 @@ function _M.connect(self, opts)
     if not sock then
         return nil, "not initialized"
     end
+    opts = opts or {}
     local host = opts.host or '127.0.0.1'
     local port = opts.port or 25
     local ok,err = sock:connect(host, port)
